@@ -82,12 +82,19 @@ class Comandos:
         produto = Estoque(None, None, None)
         produto.mostra_produtos()
 
+comandos = comandos
 valor = int(input("1 cadastrar"))
 valor = int(input("2 mostrar"))
 valor = int(input("3 atualizar"))
 valor = int(input("4 deletar"))
 valor = int(input("5 sair"))
 
-
+if valor == 1:
+comandos = Comandos()
+comandos.cadastro()
+comandos.mostrar()
+comandos.atualizar()
+comandos.deletar()
+comandos.mostrar()
 
 conexao.close()
